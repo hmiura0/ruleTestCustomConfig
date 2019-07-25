@@ -1,0 +1,12 @@
+package com.redhat.gss;
+
+import java.lang.Number;
+
+rule "ruleIsAdult"
+	dialect "mvel"
+	when
+		$p : Person( age >= 20 )
+	then
+		$p.setIsAdult( true );
+		System.out.println("### " + $p.getName() + " is adult!!!");
+end
