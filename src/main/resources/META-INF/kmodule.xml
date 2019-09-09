@@ -1,1 +1,18 @@
-<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <kbase name="testKieBase" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="com.redhat.gss.ruleTest">
+    <ksession name="testKieSession" type="stateless" default="true" clockType="realtime">
+      <listeners>
+        <agendaEventListener type="org.drools.core.event.DebugAgendaEventListener"/>
+        <ruleRuntimeEventListener type="org.drools.core.event.DebugRuleRuntimeEventListener"/>
+      </listeners>
+    </ksession>
+  </kbase>
+  <kbase name="defaultKieBase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+    <ksession name="defaultKieSession" type="stateless" default="true" clockType="realtime">
+      <listeners>
+        <ruleRuntimeEventListener type="org.drools.core.event.DebugRuleRuntimeEventListener"/>
+        <agendaEventListener type="org.drools.core.event.DebugAgendaEventListener"/>
+      </listeners>
+    </ksession>
+  </kbase>
+</kmodule>
