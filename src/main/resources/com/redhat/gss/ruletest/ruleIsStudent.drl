@@ -1,2 +1,8 @@
 package com.redhat.gss.ruletest;
 
+rule "isStudent"
+when
+    $p:com.redhat.gss.Person(age <= 15 && age >= 7)
+then
+    System.out.println("#### "+$p.getName()+" is student!");
+end
