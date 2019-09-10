@@ -2,8 +2,8 @@
   <kbase name="testKieBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" packages="com.redhat.gss.ruletest">
     <ksession name="testKieSession" type="stateless" default="true" clockType="realtime">
       <listeners>
-        <agendaEventListener type="org.drools.core.event.DebugAgendaEventListener"/>
         <ruleRuntimeEventListener type="org.drools.core.event.DebugRuleRuntimeEventListener"/>
+        <agendaEventListener type="org.drools.core.event.DebugAgendaEventListener"/>
       </listeners>
     </ksession>
   </kbase>
