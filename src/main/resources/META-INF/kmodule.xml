@@ -1,5 +1,5 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <kbase name="testKieBase" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="com.redhat.gss.ruletest">
+  <kbase name="testKieBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" packages="com.redhat.gss.ruletest">
     <ksession name="testKieSession" type="stateless" default="true" clockType="realtime">
       <listeners>
         <agendaEventListener type="org.drools.core.event.DebugAgendaEventListener"/>
